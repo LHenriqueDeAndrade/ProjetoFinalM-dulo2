@@ -32,6 +32,7 @@ export default function ODS() {
       </S.aboutODS>
       <div className="player-wrapper">
         <ReactPlayer
+          controls="true"
           className="react-player"
           url="https://www.youtube.com/watch?v=tkVAvkCF_ys&ab_channel=ProfessorLeandroFinger"
           width="100%"

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import { Link } from "react-router-dom";
-import homeBackg from "../assets/homeBG.jpg";
 
 export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Gemunu+Libre:wght@200&family=Peralta&family=Quicksand&family=Source+Sans+Pro:wght@200&display=swap');
@@ -59,7 +58,7 @@ export const Modal = styled.button`
     background-color: transparent;
     color: black;
     border: none;
-    font-size: 2em;
+    font-size: 3.5em;
     position: relative;
     left: 4vw;
   }
@@ -68,7 +67,6 @@ export const Modal = styled.button`
 export const divHome = styled.div`
   background-color: #1c033e;
   width: 100%;
-  background: url(${homeBackg});
   background-repeat: no-repeat;
   background-size: contain;
   background-color: black;
@@ -125,6 +123,7 @@ export const Title = styled.h1`
     font-size: 1.5em;
     margin-left: 7vw;
     letter-spacing: 2.88vw;
+    text-align: center;
   }
 `;
 
@@ -179,39 +178,41 @@ export const Profession = styled.h2`
     font-size: 2em;
     letter-spacing: 3px;
     left: 2vw;
-    top: 50vh;
+    top: 51vh;
   }
 `;
 
-export const bottomPage = styled.section`
+export const bottomPage = styled.footer`
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-end;
-  position: absolute;
   width: 100%;
   height: 10vh;
-  bottom: 1vw;
-  right: 1vw;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
   p {
     color: #4cc9f0;
+    display: flex;
+    align-items: center;
   }
   @media only screen and (max-width: 600px) {
+    bottom: 25vw;
+    right: 2vw;
     p {
-      margin-left: 5vw;
-      margin-bottom: 3vh;
+      margin-top: 6vh;
+      margin-left: 10vw;
     }
   }
 `;
 
 export const socialDiv = styled.div`
-  width: 50%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: relative;
   @media only screen and (max-width: 600px) {
     display: inline-block;
-    width: 30%;
   }
 `;
 

@@ -1,5 +1,49 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+  background-color: black;
+}
+
+#dark .Hamburguer {
+  color: #ff0000;
+  font-size: 3.5em;
+}
+
+#light {
+  background-image: url("assets/LightDesk.jfif");
+  background-size: contain;
+}
+
+@media (max-width: 600px) {
+  #light {
+    background-size: 450px 800px;
+  }
+}
+
+#dark {
+  background-image: url("assets/BlackDesk.jpg");
+  background-size: contain;
+}
+
+@media (max-width: 600px) {
+  #dark {
+    background-size: 1200px 760px;
+  }
+}
+
+.switch {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch label {
+  margin: 10px;
+}
+
+#light .switch label {
+  color: black;
+}
+
+#dark .switch label {
+  color: white;
 }

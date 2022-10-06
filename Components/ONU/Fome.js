@@ -8,11 +8,11 @@ export default function Fome() {
       <img src={odsFomeLarge} alt="ODS Fome" />
       <div>
         <p>
-          1.1: Garantir cestas básicas aos moradores de comunidade, dando foco
-          em favelas e lugares marginalizados.
+          1.1: Garantir cestas básicas aos moradores de bairros mais pobres,
+          dando foco em locais mais marginalizados.
         </p>
         <p>
-          1.2: Apoiar lugares que entregam quentinhas em Santa Cruz, com
+          1.2: Apoiar lugares que entregam quentinhas em Volta Redonda, com
           alimentos ou qalquer valor, podendo ser feito por moradores com
           condições melhores.
         </p>
