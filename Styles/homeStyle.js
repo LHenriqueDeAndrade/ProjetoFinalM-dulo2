@@ -41,6 +41,7 @@ export const miniMenu = styled.nav`
     ul {
       display: inline-block;
       left: 0vw;
+      width: 92vw;
     }
     li {
       display: flex;
@@ -155,11 +156,10 @@ export const aboutMe = styled.section`
       margin-left: 2vw;
     }
     @media only screen and (max-width: 600px) {
-      width: 100%;
-      height: 23vh;
+      margin-left: 2vw;
       img {
-        width: 94vw;
-        height: 55vh;
+        width: 90vw;
+        height: 50vh;
       }
     }
   }
@@ -176,7 +176,7 @@ export const Profession = styled.h2`
   opacity: 0.7;
   position: absolute;
   @media only screen and (max-width: 600px) {
-    font-size: 2.4em;
+    font-size: 2em;
     letter-spacing: 3px;
     left: 2vw;
     top: 50vh;
@@ -210,10 +210,8 @@ export const socialDiv = styled.div`
   justify-content: space-around;
   position: relative;
   @media only screen and (max-width: 600px) {
-    left: 10vw;
-    bottom: 1vh;
     display: inline-block;
-    width: 50%;
+    width: 30%;
   }
 `;
 

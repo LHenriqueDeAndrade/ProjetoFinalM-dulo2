@@ -7,6 +7,9 @@ import fotoPessoal from "../assets/me.png";
 import zap from "../assets/watsapp.png";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
+import Fome from "./ONU/Fome.js";
+import Saude from "./ONU/Saude.js";
+import Educacao from "./ONU/Educacao.js";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -32,7 +35,7 @@ export default function Home() {
   return (
     <S.divHome>
       <BrowserRouter>
-        <S.Title>Hi, I'm Luiz Henrique. Welcome to my Blog</S.Title>
+        <S.Title>Olá, sou Luiz Henrique. Bem vindo ao meu Blog</S.Title>
         <div>
           <S.Modal
             onClick={() => {
@@ -64,7 +67,7 @@ export default function Home() {
 
             <S.Profession>Desenvolvedor Front-End</S.Profession>
             <S.bottomPage>
-              <p>©️ Site desenvolvido por Luiz Henrique de Souza Pinto</p>
+              <p>©️ Site criado por Luiz Henrique de Souza Pinto</p>
               <S.socialDiv>
                 <a href="https://wa.me/+5524999375357">
                   <S.socialLinks src={zap} alt="Logo Whatsapp" />
@@ -84,7 +87,11 @@ export default function Home() {
         <Routes>
           <Route path="/Home" />
           <Route path="/Main" element={<Main />} />
-          <Route path="/ODS" element={<Ods />} />
+          <Route path="/ODS" element={<Ods />}>
+            <Route path="a" element={<Fome />} />
+            <Route path="b" element={<Saude />} />
+            <Route path="c" element={<Educacao />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </S.divHome>
