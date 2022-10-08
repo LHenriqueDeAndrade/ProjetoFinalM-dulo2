@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import mainBackg from "../assets/MainBackground.jpeg";
+import Fire from "../assets/fire.gif";
 
-export const mainDiv = styled.div`
+export const aboutMainSection = styled.section`
   width: 100%;
-  background: url(${mainBackg});
-  background-size: cover;
-  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #6800f0;
   -webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.23, 1, 0.32, 1)
     both;
   animation: slide-in-blurred-top 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
@@ -51,72 +52,69 @@ export const mainDiv = styled.div`
   }
 `;
 
-export const titulo = styled.div`
+export const aboutDiv = styled.div`
+  width: 90%;
+  margin-top: 4em;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: 1.5em;
-  height: 40vh;
-  hr {
-    width: 20vw;
-    height: 0.4vw;
-    background-color: black;
-    border-style: none;
+  justify-content: space-around;
+  img {
+    width: 30%;
+    border: 2px solid #ff0000;
+    border-radius: 0px 20px 0px 20px;
+    @media (max-width: 600px) {
+      width: 50%;
+    }
   }
-  @media only screen and (max-width: 600px) {
-    font-size: 0.9em;
-    height: 25vh;
-    color: #3574e1;
-    text-align: center;
-    hr {
-      background-color: #3574e1;
-      width: 40vw;
-      height: 0.7vh;
-      margin-top: 1vh;
+  p {
+    width: 30%;
+    text-align: justify;
+    font-size: 1.5em;
+    font-family: "Brush Script MT", cursive;
+    span {
+      color: #ff0000;
+      font-weight: bolder;
+    }
+    @media (max-width: 600px) {
+      width: 40%;
+      font-size: 0.9em;
     }
   }
 `;
 
-export const Div = styled.div`
-  display: flex;
-  width: 100%;
-  height: 700px;
-  justify-content: space-evenly;
-  background-color: transparent;
-  @media only screen and (max-width: 600px) {
-    flex-direction: column;
-    width: 96%;
-    height: 1900px;
-    margin-left: 1.7vw;
+export const textGif = styled.h2`
+  width: 70%;
+  font-size: 3em;
+  text-align: center;
+  span {
+    color: rgba(225, 225, 225, 0.01);
+    background-image: url(${Fire});
+    background-repeat: repeat;
+    animation: animate 15s ease-in-out infinite;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    -webkit-background-clip: text;
+    @media (max-width: 600px) {
+      font-size: 1em;
+    }
+    @keyframes animate {
+      0%,
+      100% {
+        background-position: left top;
+      }
+      25% {
+        background-position: right bottom;
+      }
+      50% {
+        background-position: left bottom;
+      }
+      75% {
+        background-position: right top;
+      }
+    }
   }
-`;
-
-export const Work = styled.div`
-  iframe {
-    width: 100%;
-    height: 49vh;
-  }
-  @media only screen and (max-width: 600px) {
-    border: solid blue;
-    margin-left: 2vw;
-  }
-`;
-
-export const legenda = styled.details`
-  width: 29vw;
-  color: #fff;
-  background-color: #3a0ca3;
-  padding: 2vh 0 2vh 0.5vw;
-  summary {
-    font-size: 1.2em;
-  }
-  p {
-    width: 98%;
-    margin-top: 1vh;
-    font-size: 1.2em;
-  }
-  @media only screen and (max-width: 600px) {
-    width: 100%;
+  @media (max-width: 600px) {
+    font-size: 2em;
   }
 `;

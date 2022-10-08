@@ -1,4 +1,4 @@
-html {
+body {
   background-color: black;
 }
 
@@ -8,24 +8,25 @@ html {
 }
 
 #light {
-  background-image: url("assets/LightDesk.jfif");
+  background-image: url("assets/Front2.png");
   background-size: contain;
 }
 
 @media (max-width: 600px) {
   #light {
-    background-size: 450px 800px;
+    background-position: 110% 0%;
   }
 }
 
 #dark {
-  background-image: url("assets/BlackDesk.jpg");
+  background-image: url("assets/Front2.png");
   background-size: contain;
+  opacity: 0.5;
 }
 
 @media (max-width: 600px) {
   #dark {
-    background-size: 1200px 760px;
+    background-position: 110% 0%;
   }
 }
 

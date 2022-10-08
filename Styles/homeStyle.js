@@ -3,12 +3,10 @@ import { createGlobalStyle } from "styled-components";
 import { Link } from "react-router-dom";
 
 export const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Gemunu+Libre:wght@200&family=Peralta&family=Quicksand&family=Source+Sans+Pro:wght@200&display=swap');
   *{
    margin:0;
    padding:0;
    box-sizing:border-box;
-   font-family: 'Peralta', cursive;
    ::-webkit-scrollbar { 
    width: 0.6vw;
   }
@@ -68,19 +66,32 @@ export const divHome = styled.div`
   background-color: #1c033e;
   width: 100%;
   background-repeat: no-repeat;
-  background-size: contain;
   background-color: black;
   @media only screen and (max-width: 600px) {
-    background-size: cover;
+    background-color: #55d3fd;
   }
 `;
 
 export const Nav = styled.nav`
   display: flex;
-  justify-content: center;
+  font-family: "Brush Script MT", cursive;
+  height: 15vh;
+  justify-content: space-between;
+  background-color: black;
+  box-shadow: rgba(240, 238, 238, 0.762) 0px -30px 36px -28px inset;
+  img {
+    display: flex;
+    height: 11vh;
+    &:hover {
+      cursor: pointer;
+    }
+    @media only screen and (max-width: 600px) {
+      height: 8em;
+    }
+  }
   ul {
-    width: 30vw;
-    height: 20vh;
+    width: 40vw;
+    height: 13vh;
     list-style: none;
     display: flex;
     justify-content: space-evenly;
@@ -113,7 +124,6 @@ export const Title = styled.h1`
   animation: textclip 4s linear infinite;
   display: flex;
   justify-content: center;
-  margin-top: 2vh;
   @keyframes textclip {
     to {
       background-position: 200% center;
@@ -128,14 +138,16 @@ export const Title = styled.h1`
 `;
 
 export const Linker = styled(Link)`
-  color: brown;
+  color: #ffffffff;
   text-decoration: none;
   font-size: 2em;
   font-weight: bolder;
   transition: 0.8s ease-in-out;
+  border-radius: 10px;
   &:hover {
     cursor: pointer;
-    color: gold;
+    transition: box-shadow 0.9s;
+    box-shadow: inset 150px 0px #ffffff5f;
   }
 `;
 
@@ -150,15 +162,32 @@ export const aboutMe = styled.section`
   display: flex;
   figure {
     img {
-      width: 20vw;
-      border-radius: 40px;
-      margin-left: 2vw;
+      position: absolute;
+      left: -40vw;
+      width: 39vw;
+      height: 70vh;
+      -webkit-animation: slide 0.5s forwards;
+      -webkit-animation-delay: 2s;
+      animation: slide 0.8s ease-in forwards;
+      animation-delay: 0.7s;
+      @-webkit-keyframes slide {
+        100% {
+          left: 0;
+        }
+      }
+
+      @keyframes slide {
+        100% {
+          left: 0;
+        }
+      }
     }
     @media only screen and (max-width: 600px) {
       margin-left: 2vw;
       img {
+        left: -90vw;
         width: 90vw;
-        height: 50vh;
+        height: 40vh;
       }
     }
   }
@@ -166,13 +195,12 @@ export const aboutMe = styled.section`
 
 export const Profession = styled.h2`
   font-size: 7em;
-  font-family: "Koulen", cursive;
   letter-spacing: 5px;
+  font-family: "Koulen", cursive;
   position: absolute;
-  left: 2.6em;
-  top: 1em;
-  color: #4361ee;
-  opacity: 0.7;
+  left: 31vw;
+  top: 0;
+  color: #0004e3;
   position: absolute;
   @media only screen and (max-width: 600px) {
     font-size: 2em;
@@ -184,7 +212,7 @@ export const Profession = styled.h2`
 
 export const bottomPage = styled.footer`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
   height: 10vh;
   background-color: black;
@@ -194,13 +222,18 @@ export const bottomPage = styled.footer`
     color: #4cc9f0;
     display: flex;
     align-items: center;
+    letter-spacing: 2px;
+    span {
+      font-family: "Brush Script MT", cursive;
+      margin-left: 1vw;
+    }
   }
   @media only screen and (max-width: 600px) {
-    bottom: 25vw;
-    right: 2vw;
+    height: 10vh;
+    flex-direction: row;
+    align-items: center;
     p {
-      margin-top: 6vh;
-      margin-left: 10vw;
+      font-size: 0.8em;
     }
   }
 `;
@@ -210,9 +243,8 @@ export const socialDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: relative;
   @media only screen and (max-width: 600px) {
-    display: inline-block;
+    width: 100%;
   }
 `;
 
@@ -229,6 +261,5 @@ export const socialLinks = styled.img`
   }
   @media only screen and (max-width: 600px) {
     width: 10vw;
-    margin-bottom: 1.2vh;
   }
 `;

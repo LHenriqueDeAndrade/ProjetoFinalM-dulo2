@@ -3,12 +3,59 @@ import { Link } from "react-router-dom";
 
 export const odsTab = styled.section`
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: rgb(0, 147, 233);
   background-image: linear-gradient(
     315deg,
     rgb(0, 147, 233) 0%,
-    rgb(128, 208, 199) 100%
+    rgb(128, 193, 208) 100%
   );
+  -webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.23, 1, 0.32, 1)
+    both;
+  animation: slide-in-blurred-top 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+  @-webkit-keyframes slide-in-blurred-top {
+    0% {
+      -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+      transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+      -webkit-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+      -webkit-filter: blur(40px);
+      filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+      transform: translateY(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-blurred-top {
+    0% {
+      -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+      transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+      -webkit-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+      -webkit-filter: blur(40px);
+      filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+      transform: translateY(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
 `;
 
 export const aboutODS = styled.section`
@@ -37,12 +84,13 @@ export const Objectives = styled.p`
 
 export const sectionRoutes = styled.section`
   display: flex;
+  width: 100%;
   justify-content: space-evenly;
   background-color: rgb(36, 180, 180);
   background-image: linear-gradient(
     315deg,
-    rgb(42, 164, 235) 0%,
-    rgb(61, 191, 214) 100%
+    rgb(70, 160, 212) 30%,
+    rgb(65, 172, 235) 100%
   );
   @media only screen and (max-width: 600px) {
     flex-direction: column;

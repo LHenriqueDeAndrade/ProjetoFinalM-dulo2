@@ -5,7 +5,7 @@ export default function Main() {
   return (
     <S.mainDiv>
       <S.titulo>
-        <h1>Choose a Project to View</h1>
+        <h1>Escolha um projeto para visualizar...</h1>
         <hr></hr>
       </S.titulo>
       <S.Div>
@@ -14,9 +14,9 @@ export default function Main() {
           <S.legenda>
             <summary>Star Wars</summary>
             <p>
-              Site created with a design based on the Star Wars movie, Star
-              Wars: The Rise of Skywalker, with only HTML5 and CSS as the final
-              challenge of the course's first module.
+              Site criado com design baseado no filme Star Wars: The Rise of
+              Skywalker; somente com HTML5 and CSS como o desafio final do
+              primeiro módulo do curso Vai na Web.
             </p>
           </S.legenda>
         </S.Work>
@@ -25,8 +25,8 @@ export default function Main() {
           <S.legenda>
             <summary>Pair-Programming</summary>
             <p>
-              Work done in pairs. Using React, we built a small recipe
-              e-commerce.
+              Trabalho feito em dupla. Usando o framework React, nós construimos
+              um pequeno e-commerce de receitas.
             </p>
           </S.legenda>
         </S.Work>
@@ -35,9 +35,9 @@ export default function Main() {
           <S.legenda>
             <summary>Api Harry Potter</summary>
             <p>
-              Small Api made with React. By using hooks useState, useEffect, and
-              the method map, I was able to crop and map the page through the
-              different Hogwarts houses.
+              Pequena Api feita React. Ao ultilizar os hooks useState, useEffect
+              e o método map, eu fui capaz de mapear as diferentes casas de
+              Hogwarts.
             </p>
           </S.legenda>
         </S.Work>

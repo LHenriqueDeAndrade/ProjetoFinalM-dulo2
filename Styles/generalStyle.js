@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const divSustentabilidade = styled.section`
   width: 80%;
   border-radius: 15px;
-  margin: 5vh auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   img {
     width: 100%;
   }
