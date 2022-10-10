@@ -31,6 +31,7 @@ export const miniMenu = styled.nav`
     list-style: none;
     justify-content: space-evenly;
     align-items: center;
+    font-family: "Brush Script MT", cursive;
   }
   @media only screen and (max-width: 600px) {
     display: flex;
@@ -72,6 +73,20 @@ export const divHome = styled.div`
   }
 `;
 
+export const Linker = styled(Link)`
+  color: #ffffffff;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: bolder;
+  transition: 0.8s ease-in-out;
+  border-radius: 10px;
+  &:hover {
+    cursor: pointer;
+    transition: box-shadow 0.9s;
+    box-shadow: inset 150px 0px #1a27e2c2;
+  }
+`;
+
 export const Nav = styled.nav`
   display: flex;
   font-family: "Brush Script MT", cursive;
@@ -81,7 +96,9 @@ export const Nav = styled.nav`
   box-shadow: rgba(240, 238, 238, 0.762) 0px -30px 36px -28px inset;
   img {
     display: flex;
-    height: 11vh;
+    height: 8vh;
+    margin-left: 2vw;
+    margin-top: 2vh;
     &:hover {
       cursor: pointer;
     }
@@ -137,20 +154,6 @@ export const Title = styled.h1`
   }
 `;
 
-export const Linker = styled(Link)`
-  color: #ffffffff;
-  text-decoration: none;
-  font-size: 2em;
-  font-weight: bolder;
-  transition: 0.8s ease-in-out;
-  border-radius: 10px;
-  &:hover {
-    cursor: pointer;
-    transition: box-shadow 0.9s;
-    box-shadow: inset 150px 0px #ffffff5f;
-  }
-`;
-
 // <-------------------------------------------------------Profile------------------------------------------------------->
 
 export const Profile = styled.div`
@@ -203,10 +206,9 @@ export const Profession = styled.h2`
   color: #0004e3;
   position: absolute;
   @media only screen and (max-width: 600px) {
-    font-size: 2em;
-    letter-spacing: 3px;
+    font-size: 2.3em;
     left: 2vw;
-    top: 51vh;
+    top: 50vh;
   }
 `;
 
@@ -234,6 +236,7 @@ export const bottomPage = styled.footer`
     align-items: center;
     p {
       font-size: 0.8em;
+      margin-left: 3vw;
     }
   }
 `;
