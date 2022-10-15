@@ -3,10 +3,11 @@ import * as S from "../Styles/aboutStyle.js";
 import Vr from "../assets/VoltaR.png";
 import BatistaImg from "../assets/Batista.jpg";
 import Ending from "../assets/Formado.png";
+import "../darkMode.css";
 
 export default function About() {
   return (
-    <S.aboutMainSection>
+    <S.aboutMainSection className="about">
       <S.textGif>
         Olá, me chamo <span>Luiz Henrique de Souza Pinto</span>
         ...

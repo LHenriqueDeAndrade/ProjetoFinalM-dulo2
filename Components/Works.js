@@ -1,9 +1,10 @@
 import React from "react";
-import * as S from "../Styles/mainStyle.js";
+import * as S from "../Styles/worksStyle.js";
+import "../darkMode.css";
 
-export default function Main() {
+export default function Works() {
   return (
-    <S.mainDiv>
+    <S.worksDiv className="works">
       <S.titulo>
         <h1>Escolha um projeto para visualizar...</h1>
         <hr></hr>
@@ -11,7 +12,7 @@ export default function Main() {
       <S.Div>
         <S.Work>
           <iframe src="https://codesandbox.io/embed/sad-frost-27oe6z"></iframe>
-          <S.legenda>
+          <S.legenda className="legend">
             <summary>Star Wars</summary>
             <p>
               Site criado com design baseado no filme Star Wars: The Rise of
@@ -22,7 +23,7 @@ export default function Main() {
         </S.Work>
         <S.Work>
           <iframe src="https://codesandbox.io/embed/react-pair-programming-z7u6jc"></iframe>
-          <S.legenda>
+          <S.legenda className="legend">
             <summary>Pair-Programming</summary>
             <p>
               Trabalho feito em dupla. Usando o framework React, nós construimos
@@ -32,7 +33,7 @@ export default function Main() {
         </S.Work>
         <S.Work>
           <iframe src="https://codesandbox.io/embed/react-hooks-api-harry-potter-ysyty7"></iframe>
-          <S.legenda>
+          <S.legenda className="legend">
             <summary>Api Harry Potter</summary>
             <p>
               Pequena Api feita React. Ao ultilizar os hooks useState, useEffect
@@ -42,6 +43,6 @@ export default function Main() {
           </S.legenda>
         </S.Work>
       </S.Div>
-    </S.mainDiv>
+    </S.worksDiv>
   );
 }

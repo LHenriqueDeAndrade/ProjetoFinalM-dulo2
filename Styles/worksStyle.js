@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import mainBackg from "../assets/MainBackground.jpeg";
+import worksBackg from "../assets/WorksBackground.jpeg";
 
-export const mainDiv = styled.div`
-  width: 100%;
-  background: url(${mainBackg});
+export const worksDiv = styled.div`
+  background: url(${worksBackg});
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   -webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.23, 1, 0.32, 1)
     both;

@@ -5,10 +5,11 @@ import * as S from "../Styles/odsStyle.js";
 import odsFome from "../assets/fomeZeroSmall.png";
 import odsSaude from "../assets/saudeSmall.png";
 import odsEducacao from "../assets/educacaoSmall.png";
+import "../darkMode.css";
 
 export default function ODS() {
   return (
-    <S.odsTab>
+    <S.odsTab className="ods">
       <S.aboutODS>
         <h1>Desenvolvimento Sustentável em Volta Redonda</h1>
         <h3>Quais os objetivos do Desenvolvimento Sustentável?</h3>
@@ -39,7 +40,7 @@ export default function ODS() {
           height="100%"
         />
       </div>
-      <S.sectionRoutes>
+      <S.sectionRoutes className="odsRoutes">
         <figure>
           <S.Linker to="a">
             <img src={odsFome} />

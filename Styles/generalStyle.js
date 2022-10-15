@@ -12,6 +12,7 @@ export const divSustentabilidade = styled.section`
   div {
     p {
       font-size: 1.5em;
+      color: black;
       padding: 1vh 0 1vh 2vw;
       background-color: white;
     }

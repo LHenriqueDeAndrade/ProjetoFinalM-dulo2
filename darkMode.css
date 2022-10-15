@@ -1,0 +1,83 @@
+#light {
+  color: white;
+}
+
+@media (max-width: 600px) {
+  #light {
+    background-position: 110% 0%;
+  }
+}
+
+#dark {
+  color: white;
+}
+
+@media (max-width: 600px) {
+  #dark {
+    background-position: 110% 0%;
+  }
+}
+
+.switch {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch label {
+  margin: 10px;
+}
+
+#light .switch label {
+  color: white;
+  font-size: 1.2em;
+  margin-left: 10vw;
+}
+
+#dark .switch label {
+  color: white;
+  font-size: 1.2em;
+  margin-left: 10vw;
+}
+
+#modalSwitch {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #modalSwitch {
+    display: flex;
+  }
+}
+
+#dark .home {
+  background-image: url(assets/FrontDark.png);
+}
+
+#dark .about {
+  background-color: #212121ff;
+}
+
+#dark .works {
+  background-image: url(assets/WorksBackgroundGrayscale.jpeg);
+}
+
+#dark .legend {
+  background-color: black;
+}
+
+#dark .ods {
+  background-color: #212121ff;
+  background-image: none;
+}
+
+#dark .odsRoutes {
+  background-color: #212121ff;
+  background-image: none;
+}
+
+#dark .text {
+  background-color: #212121ff;
+  color: white;
+}

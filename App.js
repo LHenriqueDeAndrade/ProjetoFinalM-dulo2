@@ -1,12 +1,12 @@
 import React from "react";
-import Home from "./Components/Home.js";
-import * as S from "./Styles/homeStyle.js";
+import Header from "./Components/Header.js";
+import * as S from "./Styles/headerStyle.js";
 
 export default function App() {
   return (
     <>
       <S.GlobalStyle />
-      <Home />
+      <Header />
     </>
   );
 }
