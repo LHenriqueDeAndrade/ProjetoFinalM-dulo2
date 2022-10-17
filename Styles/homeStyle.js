@@ -97,6 +97,7 @@ export const aboutMe = styled.section`
   display: flex;
   figure {
     img {
+      object-fit: contain;
       position: absolute;
       left: -40vw;
       width: 39vw;
